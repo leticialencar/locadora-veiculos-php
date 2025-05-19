@@ -8,17 +8,9 @@ CREATE TABLE veiculos (
     situacao ENUM('Disponível', 'Alugado', 'Manutenção') DEFAULT 'Disponível'
 );
 
-CREATE TABLE clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    cpf VARCHAR(14) UNIQUE,
-    cnh VARCHAR(20),
-    validade_cnh DATE
-);
-
 CREATE TABLE alugueis (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT,
+    nome_cliente VARCHAR(100),
     veiculo_id INT,
     data_retirada DATE,
     data_prevista DATE,
@@ -26,6 +18,5 @@ CREATE TABLE alugueis (
     valor_total DECIMAL(10,2),
     status ENUM('Aberto', 'Finalizado') DEFAULT 'Aberto',
 
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
     FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
 );

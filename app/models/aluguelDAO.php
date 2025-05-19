@@ -23,16 +23,23 @@ class AluguelDAO {
     }
 
 
-    public function listarTodos() {
+    public function listar() {
         $stmt = $this->conn->query("SELECT * FROM alugueis");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
-    public function buscarPorId($id) {
-        $stmt = $this->conn->prepare("SELECT * FROM alugueis WHERE id = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+    public function buscar($termo = '') {
+        $sql = "SELECT a.*, c.nome AS cliente_nome 
+                FROM alugueis a 
+                JOIN clientes c ON a.cliente_id = c.id 
+                WHERE c.nome LIKE :termo 
+                OR a.data_retirada LIKE :termo 
+                OR a.data_prevista LIKE :termo";
+        
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([':termo' => "%$termo%"]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 
