@@ -1,5 +1,5 @@
 <?php
-require_once 'app/models/aluguel.php';
+require_once 'aluguel.php';
 
 class AluguelDAO {
     private $conn;

@@ -1,5 +1,7 @@
 <?php
 
+require_once 'cliente.php';
+
 class ClienteDAO {
     private $pdo;
 
