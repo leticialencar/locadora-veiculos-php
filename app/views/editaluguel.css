@@ -1,0 +1,85 @@
+/* Fundo da página com imagem suave */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/736x/51/66/1a/51661a466d79ff543b1f7b7d58e893c4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Container central */
+form {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    margin: 60px auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input[readonly] {
+    background-color: #e0e0e0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00a86b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #007a53;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}

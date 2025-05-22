@@ -1,0 +1,85 @@
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-image: url('https://i.pinimg.com/736x/51/66/1a/51661a466d79ff543b1f7b7d58e893c4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Formulários */
+form {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, select, button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Mensagem de sucesso */
+p[style*='color:green'] {
+  background-color: rgba(0, 128, 0, 0.8);
+  padding: 10px;
+  border-radius: 6px;
+  color: white !important;
+  display: inline-block;
+}

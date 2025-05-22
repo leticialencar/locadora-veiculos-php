@@ -1,0 +1,23 @@
+CREATE TABLE veiculos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    modelo VARCHAR(100),
+    marca VARCHAR(100),
+    preco DECIMAL(10,2)
+    ano INT,
+    placa VARCHAR(10) UNIQUE,
+    cor VARCHAR(50),
+    situacao ENUM('Disponível', 'Alugado', 'Manutenção') DEFAULT 'Disponível'
+);
+
+CREATE TABLE alugueis (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_cliente VARCHAR(100),
+    veiculo_id INT,
+    data_retirada DATE,
+    data_prevista DATE,
+    data_real DATE,
+    valor_total DECIMAL(10,2),
+    status ENUM('Aberto', 'Finalizado') DEFAULT 'Aberto',
+
+    FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
+);
